@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <title>Socket Chat</title>
+    </head>
+
+    <body>
+
+        <div id="enterUsername" class="container">
+            <div class="form-group">
+                <input type="text" id="username" class="form-control" placeholder="ENTER USERNAME">
+                <br>
+                <a href="" id="enterChat" class="btn btn-primary">Enter chat</a>
+            </div>
+        </div>
+
+        <div id="chatMain" class="container hidden">
+
+            <h1 class="display-4">Chat</h1>
+
+            <div id="mainInner" class="row">
+                <div id="chatWindows" class="col-9">
+                    <div id="publicChat" class="chatroom active"></div>
+                </div>
+                <div id="userList" class="col-3">
+                    <ul></ul>
+                </div>
+            </div>
+
+            <div id="rooms" class="row">
+                <div id="mainroom" class="active">
+                    Public Chat
+                </div>
+            </div>
+
+            <div class="row">
+                <br>
+                <br>
+                <div class="">
+                    <textarea name="" id="chatText" cols="30" rows="10" class="form-control" placeholder="Enter chat message"></textarea>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="client.js"></script> 
+        <script>
+        $(function () {
+            $("input#username").focus();
+        });
+        </script>
+    </body>
+
+</html>
